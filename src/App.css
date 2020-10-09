@@ -74,6 +74,7 @@
   display: flex;
   justify-content: center;
   text-transform: capitalize;
+  letter-spacing: 2px;
 }
 
 .title-heading {
