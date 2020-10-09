@@ -23,11 +23,11 @@ const Contextprovider = (props) => {
 
     const CompleteTODO = (id) => {
         TODO.map (ok => {
-
             if (id === ok.id) {
                 ok.check = true;
                 TODOO()
             }
+            
         })
 
     }

@@ -16,7 +16,7 @@ const Details = ({TODO}) => {
         </div>
           
         <div className='title-button'>
-                <button onClick={() => removeTODO(TODO.id)} > X </button>  
+                <button onClick={() => removeTODO(TODO.id)} style={{color:"red"}}> X </button>  
 
                 {
                     TODO.check === false ? <button onClick={() => CompleteTODO(TODO.id)}> Done </button> : null
