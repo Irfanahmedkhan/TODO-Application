@@ -1,31 +1,30 @@
 import React, { useContext, useState } from 'react'
-import { BookContext } from '../Context/Bookcontext'
+import { Context } from '../Context/Context'
 
 
 const Form = () => {
 
-    const { addBook } = useContext(BookContext)
+    const { addTODO } = useContext(Context)
 
     const [title, settitle] = useState('')
-    const [author, setauthor] = useState('')
-    console.log(title);
-
-    const submitbook = (e) => {
+    const [check, setcheck] = useState(false)
+    console.log(setcheck);
+    
+    const submitTODO = (e) => {
         e.preventDefault()
         settitle('')
-        setauthor('')
-        addBook(title, author)
+        addTODO(title,  check)
     }
 
 
 
     return (
-<form onSubmit={submitbook}>
-            <input type='text' required placeholder='Book Subject' value={title} onChange={(e) => settitle(e.target.value)} />
-            <input type='text' required placeholder='Author Name' value={author} onChange={(e) => setauthor(e.target.value)} />
-            <input type='submit' value='Add Book' />
-</form>
-
+        <div className='addtodo'>
+            <form onSubmit={submitTODO} className='addform'>
+                <input type='text' required placeholder='TODO' value={title} onChange={(e) => settitle(e.target.value)} />
+                <button type='submit'>Add TODO</button>
+            </form>
+        </div>
 
     )
 }

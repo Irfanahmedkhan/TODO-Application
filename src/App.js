@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import Navbar from './Components/Navbar';
-import BookContextprovider from './Context/Bookcontext';
-import Booklist from './Components/Booklist';
+import Contextprovider from './Context/Context';
+import TODODetails from './Components/TODOlist';
 import Form from './Components/Form';
 
 
@@ -10,11 +10,11 @@ function App() {
   return (
     <div className="App">
 
-      <BookContextprovider>
+      <Contextprovider>
         <Navbar />
         <Form />
-        <Booklist />
-      </BookContextprovider>
+        <TODODetails />
+      </Contextprovider>
 
     </div>
   );

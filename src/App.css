@@ -1,87 +1,117 @@
-body {
-  margin: 0;
+* {
+  margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #553055;
 }
 
 .App {
-  background: #4c2a4c;
-  margin: 20px auto;
-  width: 90%;
-  max-width: 700px;
-  color: #eee;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 100vh;
 }
 
 .navbar {
-  padding: 10px 20px;
-  text-align: center;
-  background: #6d3d6d
-}
-
-.navbar h1 {
-  margin: 10px 0;
-}
-
-.book-list {
-  margin: 20px;
-}
-
-.book-list ul {
-  padding: 0;
-  list-style-type: none;
-}
-
-.book-list li {
-  background: #6d3d6d;
-  border-radius: 4px;
-  padding: 10px;
-  cursor: pointer;
-  margin: 10px 0;
-}
-
-.book-list li:hover {
-  opacity: 0.7;
-  text-decoration: line-through;
-}
-
-.book-list .title {
-  font-weight: bold;
-  color: #fff;
-  font-size: 1.2em;
-}
-
-.book-list .author {
-  font-size: 0.9em;
-  color: #ddd;
-}
-
-.empty {
-  margin: 20px;
-  text-align: center;
-}
-
-form {
-  padding: 20px;
-}
-
-input[type='text'] {
+  background-color: rgb(7, 164, 255);
   width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  margin: 6px 0;
-  background: #3c1f3c;
-  color: #fff;
-  border: 0;
-  border-radius: 8px;
+  text-align: center;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
 }
 
-input[type='submit'] {
-  margin: 10px auto;
-  background: #eee;
-  border: 0;
-  padding: 6px 20px;
-  display: block;
-  border-radius: 8px;
+.addtodo {
+  display: flex;
+  background-color: rgb(7, 164, 255);
+  width: 100%;
+  height: 10vh;
+}
+
+.addform {
+  display: flex;
+  background-color: rgb(7, 164, 255);
+  width: 80%;
+  height: 10vh;
+}
+
+.addtodo input {
+  width: 90%;
+  height: 5vh;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 20px;
+  color: darkslategray;
+}
+
+.addtodo button {
+  background-color: transparent;
+  height: 7vh;
+  border: none;
+  color: white;
+  font-weight: 800;
+  width: 120px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.todo-list {
+  width: 100%;
+}
+
+.title {
+  background-color: rgb(7, 164, 255);
+  width: 80%;
+  min-height: 7vh;
+  margin: 20px auto;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+  
+}
+
+.title-heading {
+  padding: 10px;
+  position: absolute;
+  left: 0px;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+}
+
+.title-heading span {
+  font-size: 10px;
+  margin-left: 20px;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.Pending {
+  background-color: rgb(231, 109, 109);
+}
+
+.Complete {
+  background-color: rgb(43, 151, 43);
+}
+
+.title-button {
+  position: absolute;
+  right: 10px;
+}
+
+.title-button button {
+  float: right;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
 }
