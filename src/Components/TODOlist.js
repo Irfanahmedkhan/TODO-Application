@@ -18,7 +18,7 @@ const TODOList = () => {
     )
         :
         (
-            <div className='empty'>No Target set ... </div>
+            <div style={{fontSize: "2rem", color: "gray", marginTop: "30px"}}>No Target set ... </div>
 
         )
 }

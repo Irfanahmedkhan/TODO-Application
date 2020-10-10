@@ -17,8 +17,8 @@ const Contextprovider = (props) => {
 
 }
 
-    const addTODO = (title, check) => {
-        setTODO([...TODO, { title, check, id: uuidv4() }])
+    const addTODO = (title, check, comments, description) => {
+        setTODO([...TODO, { title, check, comments, description, id: uuidv4() }])
     }
 
     const CompleteTODO = (id) => {

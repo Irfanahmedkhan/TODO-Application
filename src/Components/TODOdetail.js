@@ -9,22 +9,29 @@ const Details = ({TODO}) => {
     return (
         
         <div className='title' > 
-        <div className='title-heading'>
-            <h3 > {TODO.title}
-                <span className={TODO.check === false ? 'Pending' : "Complete"}>{TODO.check === false ? 'Pending' : "Completed"}</span>
-            </h3>  
-        </div>
-          
-        <div className='title-button'>
-                <button onClick={() => removeTODO(TODO.id)} style={{color:"red"}}> X </button>  
+        
+            <div className='title-heading'>
 
-                {
-                    TODO.check === false ? <button onClick={() => CompleteTODO(TODO.id)}> Done </button> : null
-                }   
+                <div className='title-heading-text'>
+
+                    <h3 ><span>Title : </span>{TODO.title}
+                    </h3>
+
+                    <h6 className={TODO.check === false ? 'Pending' : "Complete"}>{TODO.check === false ? 'Pending' : "Completed"}</h6>
+
+                    <h3> <span>Comment : </span>{TODO.comments}
+                    </h3> 
+
+                    <h3> <span>Description : </span>{TODO.description}</h3> 
+                </div>
+
                 
-
-            
-        </div>
+            </div>
+          
+            <div className='title-button'>
+                <button onClick={() => removeTODO(TODO.id)} style={{color:"red"}}> X </button>  
+                { TODO.check === false ? <button onClick={() => CompleteTODO(TODO.id)}> Done </button> : null}                   
+            </div>
 
         
         </div>
