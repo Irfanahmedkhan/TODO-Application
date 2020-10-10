@@ -45,6 +45,7 @@
   text-align: center;
   justify-content: center;
   width: 20%;
+  position: relative;
 }
 
 .todo-input-button button {
@@ -54,6 +55,9 @@
   font-weight: 800;
   font-size: 20px;
   cursor: pointer;
+  height: 50px;
+  position: absolute;
+  top: 55px;
 }
 
 .todo-input-button button:hover {
